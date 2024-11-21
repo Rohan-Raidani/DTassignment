@@ -1,0 +1,32 @@
+:root {
+  --font-one: "Poppins", sans-serif;
+  --font-two: "Open Sans", sans-serif;
+  --head-color: #0029ff;
+  --box-color: #e9ecef;
+  --black-color: #000000;
+}
+
+.right {
+  height: 268px;
+  width: 90px;
+  top: 100px;
+  right: 0px;
+  position: absolute;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px -4px 4px 0px #00000040, 0px 4px 4px 0px #00000040;
+  border-top-left-radius: 25%;
+  border-bottom-left-radius: 25%;
+}
+.right .rightmenu {
+  height: 100%;
+  width: 40%;
+  background-color: #000000;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+}

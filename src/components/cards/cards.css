@@ -1,0 +1,269 @@
+:root {
+  --font-one: "Poppins", sans-serif;
+  --font-two: "Open Sans", sans-serif;
+  --head-color: #0029ff;
+  --box-color: #e9ecef;
+  --black-color: #000000;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 40%;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0px -4px 4px 0px #00000040, 0px 4px 4px 0px #00000040;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.card .head {
+  height: 60px;
+  background-color: #000000;
+  color: white;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+.card .head .help {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card .head .help:hover {
+  background-color: #f0f0f0;
+}
+
+.card .head h4 {
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card .content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.card .content .description {
+  overflow: hidden;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  box-shadow: 0px 1px 1px 0px #00000040;
+  transition: all 0.3s ease;
+  max-height: 500px;
+  padding: 0 10px;
+}
+
+.card.description-closed .content .description {
+  max-height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  box-shadow: 0px 1px 1px 0px #00000040;
+}
+
+.card .content p {
+  margin-bottom: 15px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card .content iframe {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  max-width: none;
+}
+.card .content .thread-container {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.thread-container .thread-name {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  border: 0.1px solid #00000020;
+  width: 100%;
+  padding: 5px;
+}
+.thread-container .thread-item {
+  width: 100%;
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.thread-container .thread-item .sub {
+  width: 40%;
+  box-shadow: 1px 3px 8px 0px #00000040;
+  border-radius: 10px;
+  padding: 5px;
+  background: #0000000d;
+  /* border: 0.1px solid #33333357; */
+}
+.thread-container .thread-item .sub input {
+  /* box-shadow: 1px 3px 8px 0px #00000040; */
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  margin-bottom: -5px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background: white;
+  border: none;
+}
+.content .thread-actions .icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.content .thread-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding: 10px;
+}
+.content .thread-actions button {
+  box-shadow: 1px 3px 8px 0px #00000040;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.content .content-editor {
+  width: calc(100% + 40px);
+
+  margin-left: -20px;
+  border-right: 1px solid #d1cece;
+  border-left: 1px solid #d1cece;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .content-editor .editor {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content .content-editor .editor .text,
+.editor-option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content .content-editor .editor .text input {
+  box-shadow: -2px 2px 6px 0px #00000026;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background: #fcfbfb;
+}
+.content .content-editor .editor .editor-option .option-box {
+  background: #fcfbfb;
+  box-shadow: 0px 2px 10px 0px #0000002e;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  z-index: 10;
+}
+.content .content-editor .editor .editor-option .option-box button {
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.content .content-editor .editor .editor-option .option-box input {
+  border: none;
+  background: #ebebeb;
+  width: 30%;
+  padding: 2px;
+}
+.content .content-editor .editor .editor-content {
+  z-index: 1;
+  box-shadow: -2px 2px 6px 0px #00000026;
+  background: #fcfbfb;
+  margin-top: -20px;
+  height: 150px;
+}
+.content .method-section {
+  height: 66%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content .method-section .thread-name h4 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content .method-section .thread-name {
+  background: #f2f2f2;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: -14px;
+}
+.content .method-section {
+  position: relative;
+}
+
+.content .method-content button {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  border: none;
+  background: transparent;
+}
+.content .method-section .example {
+  margin-left: 20%;
+  width: 80%;
+}
